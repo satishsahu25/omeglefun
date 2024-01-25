@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    
+   <h1 style="display: flex; text-align: center; justify-content: center;"> Fun with Strangers</h1>
+    <div id="selectRoom">
+        <label>Roomname</label>
+        <input id="roomnum" type="text" placeholder="Enter room name"/>
+        <label>Username</label>
+        <input id="username" type="text" placeholder="Enter user name"/>
+        <button id="goroom" >Go</button>
+    </div>
+    <div id="consultroom" style="display: none;">
+        <div style="display: flex; text-align: center; justify-content: center;">
+
+            <div>
+                <p id="personame1"></p>
+                <video id="localvideo" autoplay height="300px" width="300px" style="margin: 2px; border: green 2px solid;"></video></div>
+            <div>  
+                <p id="personame2">Stranger</p>
+                <video id="remotevideo" autoplay height="300px" width="300px" style="margin: 2px; border: red 2px solid;"></video></div>
+        </div>
+        <div style="display: flex; text-align: center; justify-content: center;">
+           
+          
+           <div style="overflow-y: scroll; height: 200px; width: 300px; webkit-overflow-scrolling: touch; border: 2px solid black;">
+            <h3 style=" border: 1px solid green;">List of Messages</h3>
+            <p id="chatarea" style="text-align: left; border-width: 0px;"></p>
+           </div>
+           <div style="margin-top: 20px; margin-left: 20px;"> 
+            <input id="chatin" type="text" style="height: 30px; padding: 2px;" placeholder="Enter text message here"/>
+            <button id="sendbtn" style="height: 30px; width: 40px; padding: 2px;">Send</button></div>
+         </div>
+       
+    </div>
+    <script src="adapter.js"></script>
+    <script src="kurento-utils.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kurento-js-utils@6.16.0/kurento-utils.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+
+</body>
+
+</html>
